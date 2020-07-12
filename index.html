@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fatal Police Shootings Visualization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-random.v1.min.js"></script>
+
+    <!-- custom style for the tooltip -->
+    <style>
+        div.circle_tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 35px;
+            padding: 2px;
+            font: 10px sans-serif;
+            border: 0px;
+            background: #6c757d;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<!-- Main HTML -->
+<div class="jumbotron text-center mb-2 py-2">
+    <h1>What we've learned about police shootings</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 mx-auto">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mx-auto">
+                        <h4></h4>
+                    </div>
+                </div>
+                <div class="row pb-1 mb-1">
+                    <div class="col-sm-6">
+                        <p> With the George Floyd's death and global Black Lives Matter movement in 2020, police 
+                            brutality once again has become a heated discussed topic.</p>
+                        <p> The Washington Post has maintained  
+                            <a href="https://github.com/washingtonpost/data-police-shootings"> a real-time police shooting dataset</a>
+                            since 2015 to record and analyze every fatal shooting by an on-duty police officer in the United States. 
+                            They made per capita based conclusions such as
+                            <a href="https://www.washingtonpost.com/nation/2019/08/09/what-weve-learned-about-police-shootings-years-after-ferguson/?arc404=true">
+                            Black Americans are disproportionately killed by police</a>. </p>
+
+                        <p> A natural follow-up question to ask is: <b>What are characteristic differences between White and African 
+                            Americans shot to death by police?</b>
+                        </p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="https://img.washingtonpost.com/wp-apps/imrs.php?src=https%3A%2F%2Fpalomaimages.washingtonpost.com%2Fprod%2Fpoliceshooting-chart_tstmp_1590646528.jpg&w=908" 
+                        class="rounded mx-auto img-fluid" alt="Shoot by race"
+                             viewBox="0 0 200 150">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p> To answer that question, I fit a Gradient Boosting model with down-sampling on the fatal police shootings records 
+                            since 2019/1/1 to classify White American vs. African American. It was able to achieve 73% accuracy given just 7 
+                            features. The model identified following attributes deserved to be noted (sorted by most significant to least significant):</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="list-group">
+                            <li class="list-group-item py-0 px-1"><b>Age:</b> African Americans fatally shot tend to be younger than White Americans counterpart.</li>
+                            <li class="list-group-item py-0 px-1"><b>Signs of Mental Illness:</b>White Americans fatally shot are more likely to show sings of mental illness.</li>
+                            <li class="list-group-item py-0 px-1"><b>Gender:</b> African Americans fatally shot are more likely to be male than White Americans counterpart.</li>
+                            <li class="list-group-item py-0 px-1"><b>Armed:</b> African Americans fatally shot are more likely to be armed with gun, and slightly less likely unarmed.</li>
+                            <li class="list-group-item py-0 px-1"><b>Body Camera:</b> Maybe contrary to people's thoughts, more African Americans fatally shot while an officer was wearing a body camera.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>Using the following animations you can explore and compare different characteristics for 
+                            White and African Americans shot to death by police. This will lead you to answer the 
+                            above question visually by yourself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-2 my-2">
+        <div class="col-sm-8 mx-auto">
+            <div class="card w-100 mx-auto shadow">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <p class="my-0 py-0">Show outcome and indicate:</p>
+                                <button id="allButton" type="button" class="btn btn-primary active btn-sm">All (no highlight)
+                                </button>
+                                <button id="ageButton" type="button" class="btn btn-primary active btn-sm">Age
+                                </button>
+                                <button id="mentalButton" type="button" class="btn btn-primary active btn-sm">Signs of Mental Illness
+                                </button>
+                                <button id="genderButton" type="button" class="btn btn-primary active btn-sm">Gender
+                                </button>
+                                <button id="armedButton" type="button" class="btn btn-primary active btn-sm">Armed
+                                </button>
+                                <button id="cameraButton" type="button" class="btn btn-primary active btn-sm">Body Camera
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 mx-auto">
+                                <svg id="overview_svg" class="mx-auto w-100" viewBox="0 0 200 150"></svg>
+                                <p class="small">Data Source: An equal random sample of 300 for either White or African Americans for ease of comparison.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-10 mx-auto">
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10 mx-auto">
+            <h4>Motivation</h4>
+            <p>The purpose of this educational article is as an example of narrative visualization in the form of Martini Glass structure 
+                and <a href="https://d3js.org/">D3.js</a> to implement it. </p>
+            <p>Author: Ernan Dai</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- JavaScript -->
+<!-- Bootstrap -->
+<script>
+    // Config
+    // SVG canvas
+    var svg_width = 200;
+    var svg_height = 150;
+
+    // Container
+    const all_container_x = 2;
+    const all_container_y = 15;
+    const all_container_margin_y = 10;
+    const all_container_width = 75;
+    const all_container_fill = "#f1f1f1";
+    const all_container_fill_opa = 0.9;
+    const all_container_stroke_with = 0.2;
+    const all_container_stroke_fill = "#9c9c9c"
+
+
+    const white_container_height = 60;
+    const white_container_width = 60;
+    const white_container_x = svg_width - all_container_x - white_container_width;
+    const white_container_y = 15;
+    const white_container_fill = "#f1f1f1";
+    const white_container_fill_opa = 0.9;
+    const white_container_stroke_with = 0.2;
+    const white_container_stroke_fill = "#9c9c9c"
+
+
+    const black_container_height = 60;
+    const black_container_width = 60;
+    const black_container_x = svg_width - all_container_x - black_container_width;
+    const black_container_y = all_container_y + (svg_height - all_container_margin_y * 2) - black_container_height;
+    const black_container_fill = "#f1f1f1";
+    const black_container_fill_opa = 0.9;
+    const black_container_stroke_with = 0.2;
+    const black_container_stroke_fill = "#9c9c9c"
+
+    const container_cap_ymargin = 1;
+    const container_cap_fontsz = 4.5;
+
+    const legend_margin_x = 2;
+    const legend_margin_y = 7;
+    const legend_text_margins = 20;
+
+    const annotation_width = 35;
+    const annotation_text_height = 7;
+    const annotation_y_margin = 5;
+
+    // Circles
+    const circle_r = 1;
+    const circle_opacity = 0.65;
+    const circle_tooltip_opacity = 0.95;
+
+    // Transition
+    const mu = 6500;
+    const sigma = 500;
+
+    // Possible parameter values (ordering matters!)
+    const armed_vals = ["gun", "other", "knife", "unarmed"];
+    const age_vals = ["<=24", "25-39", ">=40"];
+    const gender_vals = ["F", "M"];
+    const signs_of_mental_illness_vals = ["False", "True"];
+    const threat_level_vals = ["attack", "other", "undetermined"];
+    const flee_vals = ["Not fleeting", "Car", "Foot", "Other"];
+    const body_camera_vals = ["False", "True"];
+
+    // Surivaval rates (used for annotation) (result from different analysis, we could also have counted here in JS)
+    // Ordering and naming matters (ordering as above, name as in the data-file)
+    var w_rates = {
+        "armed": [0.567, 0.213, 0.143, 0.077],
+        "agegroup": [0.096, 0.397, 0.507],
+        "gender": [0.08, 0.92],
+        "signs_of_mental_illness": [0.777, 0.223],
+        "threat_level": [0.693, 0.293, 0.014],
+        "flee": [0.653, 0.213, 0.107, 0.027],
+        "body_camera": [0.9, 0.1]
+    };
+
+    var b_rates = {
+        "armed": [0.64, 0.194, 0.103, 0.063],
+        "agegroup": [0.30, 0.473, 0.227],
+        "gender": [0.02, 0.98],
+        "signs_of_mental_illness": [0.91, 0.09],
+        "threat_level": [0.71, 0.243, 0.047],
+        "flee": [0.54, 0.187, 0.24, 0.033],
+        "body_camera": [0.81, 0.19]
+    };
+
+    var parameter_dict = {
+        "armed": ["gun", "other", "knife", "unarmed"],
+        "agegroup": ["<=24", "25-39", ">=40"],
+        "gender": ["F", "M"],
+        "signs_of_mental_illness": ["False", "True"],
+        "threat_level": ["attack", "other", "undetermined"],
+        "flee": ["Not fleeting", "Car", "Foot", "Other"],
+        "body_camera": ["False", "True"]
+    };
+
+    // load the data
+    d3.csv("fatal-police-shootings-data-dropna-since2019-w300b300.csv").then(function (data) {
+        console.log(data);
+        // Iterate through all data points so to update some of their properties
+        var i = 0;
+        while (i < data.length) {
+            // Set their starting and ending position
+            var start_x = d3.randomUniform(all_container_x + circle_r, (all_container_x + all_container_width) - circle_r)();
+            var start_y = d3.randomUniform(all_container_y + circle_r, (all_container_y + svg_height - all_container_margin_y * 2) - circle_r)();
+
+            if (data[i].y == 1) {
+                var end_x = d3.randomUniform(black_container_x + circle_r, (black_container_x + black_container_width) - circle_r)();
+                var end_y = d3.randomUniform(black_container_y + circle_r, (black_container_y + black_container_height) - circle_r)();
+            } else {
+                var end_x = d3.randomUniform(white_container_x + circle_r, (white_container_x + white_container_width) - circle_r)();
+                var end_y = d3.randomUniform(white_container_y + circle_r, (white_container_y + white_container_height) - circle_r)();
+            }
+            ;
+            data[i].start_coord = [start_x, start_y];
+            data[i].end_coord = [end_x, end_y];
+
+            // Set an age group
+            var age = parseInt(data[i].age);
+            if (age < 25) {
+                data[i].agegroup = age_vals[0];
+            } else if (age < 40) {
+                data[i].agegroup = age_vals[1];
+            } else {
+                data[i].agegroup = age_vals[2];
+            }
+
+            i++;
+        }
+        ;
+
+        // Set a color attribute for all circles based on the latest button click
+        var get_color_default = function (d, i) {
+            return "#404048";
+        };
+
+        var get_color_armed = function (d, i) {
+            switch (d.armed) {
+                case armed_vals[0]:
+                    return "#ffd700";
+                case armed_vals[1]:
+                    return "#a09565"; 
+                case armed_vals[2]:
+                    return "#d0a405";
+                default:
+                    return "#e03d31" 
+            }
+            ;
+        };
+
+        var get_color_gender = function (d, i) {
+            switch (d.gender) {
+                case gender_vals[0]:
+                    return "#85ff2a";
+                default:
+                    return "#0f0ba0";
+            }
+            ;
+        };
+
+        var get_color_age = function (d, i) {
+            switch (d.agegroup) {
+                case age_vals[0]:
+                    return "#18f0ff";
+                case age_vals[1]:
+                    return "#ff48af";
+                default: 
+                    return "#1c1d1c";
+            }
+            ;
+        };
+
+        var get_color_signs_of_mental_illness = function (d, i) {
+            switch (d.signs_of_mental_illness) {
+                case signs_of_mental_illness_vals[0]:
+                    return "#316acc";
+                default:
+                    return "#e82f25";
+            }
+            ;
+        };     
+
+        var get_color_body_camera = function (d, i) {
+            switch (d.body_camera) {
+                case body_camera_vals[0]:
+                    return "#316acc";
+                default:
+                    return "#e82f25";
+            }
+            ;
+        };   
+
+        // Mapping from variable to color and description (for later legend drawing)
+        var color_name_mapping = function (attName) {
+            var result = [];
+            switch (attName) {
+                case "armed":
+                    armed_vals.forEach(function (e) {
+                        var tmp = {};
+                        tmp[attName] = e;
+                        var col = get_color_armed(tmp, 0)
+                        var race_prop =
+                        result.push(
+                            {
+                                "name": e,
+                                "color": col
+                            });
+                    });
+                    return result;
+                case "gender":
+                    gender_vals.forEach(function (e) {
+                        var tmp = {};
+                        tmp[attName] = e;
+                        var col = get_color_gender(tmp, 0);
+                        result.push(
+                            {
+                                "name": e,
+                                "color": col
+                            });
+                    });
+                    return result;
+                case "agegroup":
+                    age_vals.forEach(function (e) {
+                        var tmp = {};
+                        tmp[attName] = e;
+                        var col = get_color_age(tmp, 0);
+                        result.push(
+                            {
+                                "name": e,
+                                "color": col
+                            });
+                    });
+                    return result;
+                case "signs_of_mental_illness":
+                    signs_of_mental_illness_vals.forEach(function (e) {
+                        var tmp = {};
+                        tmp[attName] = e;
+                        var col = get_color_signs_of_mental_illness(tmp, 0);
+                        result.push(
+                            {
+                                "name": e,
+                                "color": col
+                            });
+                    });
+                    return result;
+                    case "body_camera":
+                    body_camera_vals.forEach(function (e) {
+                        var tmp = {};
+                        tmp[attName] = e;
+                        var col = get_color_body_camera(tmp, 0);
+                        result.push(
+                            {
+                                "name": e,
+                                "color": col
+                            });
+                    });
+                    return result;
+                default:
+                    var col = get_color_default(0, 0);
+                    return [{
+                        "name": default_vals,
+                        "color": col
+                    }];
+            }
+            ;
+        };
+
+
+        // set default color function
+        var get_color = get_color_default;
+
+        // Prepare SVG and containers
+        var svg = d3.select("#overview_svg");
+
+        var all_container = svg.append("rect")
+            .attr("x", all_container_x)
+            .attr("y", all_container_y)
+            .attr("width", all_container_width)
+            .attr("height", svg_height - all_container_margin_y * 2)
+            .style("fill", all_container_fill)
+            .attr("fill-opacity", all_container_fill_opa)
+            .style("stroke-width", all_container_stroke_with)
+            .style("stroke", all_container_stroke_fill);
+
+        var all_container_txt = svg.append("text")
+            .attr("x", all_container_x)
+            .attr("y", all_container_y - container_cap_ymargin)
+            .text("All deaths")
+            .attr("font-size", container_cap_fontsz);
+
+        var white_container = svg.append("rect")
+            .attr("x", white_container_x)
+            .attr("y", white_container_y)
+            .attr("width", white_container_width)
+            .attr("height", white_container_height)
+            .style("fill", white_container_fill)
+            .attr("fill-opacity", white_container_fill_opa)
+            .style("stroke-width", white_container_stroke_with)
+            .style("stroke", white_container_stroke_fill);
+
+        var white_container_txt = svg.append("text")
+            .attr("x", white_container_x)
+            .attr("y", white_container_y - container_cap_ymargin)
+            .text("White Americans")
+            .attr("font-size", container_cap_fontsz);
+
+        var black_container = svg.append("rect")
+            .attr("x", black_container_x)
+            .attr("y", black_container_y)
+            .attr("width", black_container_width)
+            .attr("height", black_container_height)
+            .style("fill", black_container_fill)
+            .attr("fill-opacity", black_container_fill_opa)
+            .style("stroke-width", black_container_stroke_with)
+            .style("stroke", black_container_stroke_fill);
+
+        var white_container_txt = svg.append("text")
+            .attr("x", black_container_x)
+            .attr("y", black_container_y - container_cap_ymargin)
+            .text("African Americans")
+            .attr("font-size", container_cap_fontsz);
+
+        // Place a div for circle tooltips
+        var circle_tooltip = d3.select("body").append("div")
+            .attr("class", "circle_tooltip")
+            .style("opacity", 1);
+
+        // Place the starting circles
+        function set_circles(selection) {
+            return selection.data(data)
+                .enter()
+                .append("circle")
+                .attr("r", circle_r)
+                .attr("cx", function (d) {return d.start_coord[0];})
+                .attr("cy", function (d) {return d.start_coord[1];})
+                .style("fill", get_color)
+                .style("opacity", circle_opacity)
+                .on("mouseover", function(d, i) {
+
+                  circle_tooltip.transition()
+                      .duration(400)
+                      .style("opacity", circle_tooltip_opacity);
+                  circle_tooltip.html("Age: " + d.age + "</br>" + "Armed: " + d.armed + "</br>" + "gender: " + d.gender + 
+                                      "</br>" + "Signs of Mental Illness: " + d.signs_of_mental_illness + 
+                                      "</br>" + "Body Camera: " + d.body_camera)
+                      .style("left", (d3.event.pageX) + "px")
+                      .style("top", (d3.event.pageY - 28) + "px")
+                      .style("width", 100 + "px")
+                      .style("height", 70 + "px")
+                      .style("background", "lightsteelblue")
+                      ;
+                })
+                .on("mouseout", function(d, i) {
+                    circle_tooltip.transition()
+                        .duration(400)
+                        .style("opacity", 0);
+                });
+        };
+
+        // Update circles (after animation was running already)
+        function replay_circles(circles_all) {
+            // Remove and put new circles
+            circles_all.remove();
+            circles_all = svg.selectAll("circle");
+            circles_all = set_circles(circles_all);
+
+            // Start the transition
+            circles_all.transition()
+                .duration(d3.randomNormal(mu, sigma)) // pass the function (not the value), each function will be called for each element in data
+                .attr("cx", function (d, i) {
+                    return d.end_coord[0];
+                })
+                .attr("cy", function (d, i) {
+                    return d.end_coord[1];
+                });
+        };
+
+        // Draw the legend
+        function draw_legend(legend_spec) {
+            // Clean up
+            svg.select("g.legend").remove();
+
+            var legend_g = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(" + legend_margin_x + "," + legend_margin_y + ")");
+
+            legend_g.selectAll("circle")
+                .data(legend_spec)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d, i) {
+                    return legend_text_margins * i;
+                })
+                .attr("cy", 0 - container_cap_fontsz / 4) // to account for the font-size
+                .attr("r", circle_r)
+                .attr("fill", function (d, i) {
+                    return d.color;
+                });
+
+            legend_g.selectAll("text")
+                .data(legend_spec)
+                .enter()
+                .append("text")
+                .attr("x", function (d, i) {
+                    return legend_text_margins * i + circle_r * 2;
+                })
+                .attr("y", 0)
+                .text(function (d, i) {
+                    return d.name;
+                })
+                .attr("font-size", container_cap_fontsz);
+
+        };
+
+        function draw_annotations(annotations, attribute_name, w_rates, b_rates) {
+            // Clean up
+            svg.selectAll("g.annotation").remove();
+
+            var annotation_g_white = svg.append("g")
+                .attr("class", "annotation")
+                .attr("transform", "translate(" + (white_container_x - annotation_width) + "," + white_container_y + ")");
+
+            annotation_g_white.selectAll("circle.white_anno")
+                .data(annotations)
+                .enter()
+                .append("circle")
+                .attr("class", "white_anno")
+                .attr("cx", 0)
+                .attr("cy", function (d, i) {
+                    return annotation_text_height * i + annotation_y_margin;
+                })
+                .attr("r", circle_r)
+                .attr("fill", function (d, i) {
+                    return d.color;
+                });
+
+            annotation_g_white.selectAll("text.white_anno")
+                .data(annotations)
+                .enter()
+                .append("text")
+                .attr("class", "white_anno")
+                .attr("x", circle_r * 2 + 1)
+                .attr("y", function (d, i) {
+                    return annotation_text_height * i + circle_r + annotation_y_margin;
+                })
+                .text(function (d, i) {
+                    return (Math.round(parseFloat(w_rates[attribute_name][i]) * 100) + "% " + parameter_dict[attribute_name][i]);
+                })
+                .attr("font-size", container_cap_fontsz);
+
+            var annotation_g_black = svg.append("g")
+                .attr("class", "annotation")
+                .attr("transform", "translate(" + (black_container_x - annotation_width) + "," + black_container_y + ")");
+
+            annotation_g_black.selectAll("circle.black_anno")
+                .data(annotations)
+                .enter()
+                .append("circle")
+                .attr("class", "black_anno")
+                .attr("cx", 0)
+                .attr("cy", function (d, i) {
+                    return annotation_text_height * i + annotation_y_margin;
+                })
+                .attr("r", circle_r)
+                .attr("fill", function (d, i) {
+                    return d.color;
+                });
+
+            annotation_g_black.selectAll("text.black_anno")
+                .data(annotations)
+                .enter()
+                .append("text")
+                .attr("class", "black_anno")
+                .attr("x", circle_r * 2 + 1)
+                .attr("y", function (d, i) {
+                    return annotation_text_height * i + circle_r + annotation_y_margin;
+                })
+                .text(function (d, i) {
+                    return (Math.round(parseFloat(b_rates[attribute_name][i]) * 100) + "% " + parameter_dict[attribute_name][i]);
+                })
+                .attr("font-size", container_cap_fontsz);
+        };
+
+        var circles_all = svg.selectAll("circle");
+        circles_all = set_circles(circles_all);
+
+
+        // Register color change and transition for all circles
+        d3.select("#allButton").on("click", function (d, i) {
+            get_color = get_color_default;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("all"));
+
+            svg.selectAll("g.annotation").remove();
+        });
+
+        d3.select("#armedButton").on("click", function (d, i) {
+            get_color = get_color_armed;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("armed"));
+
+            draw_annotations(color_name_mapping("armed"), "armed", w_rates, b_rates);
+        });
+
+        d3.select("#genderButton").on("click", function (d, i) {
+            get_color = get_color_gender;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("gender"));
+
+            draw_annotations(color_name_mapping("gender"), "gender", w_rates, b_rates);
+        });
+
+        d3.select("#ageButton").on("click", function (d, i) {
+            get_color = get_color_age;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("agegroup"));
+
+            draw_annotations(color_name_mapping("agegroup"), "agegroup", w_rates, b_rates);
+        });
+
+        d3.select("#mentalButton").on("click", function (d, i) {
+            get_color = get_color_signs_of_mental_illness;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("signs_of_mental_illness"));
+
+            draw_annotations(color_name_mapping("signs_of_mental_illness"), "signs_of_mental_illness", w_rates, b_rates);
+        });
+
+        d3.select("#cameraButton").on("click", function (d, i) {
+            get_color = get_color_body_camera;
+
+            circles_all = svg.selectAll("circle");
+            replay_circles(circles_all);
+
+            draw_legend(color_name_mapping("body_camera"));
+
+            draw_annotations(color_name_mapping("body_camera"), "body_camera", w_rates, b_rates);
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

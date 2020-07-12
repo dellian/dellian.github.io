@@ -1,0 +1,601 @@
+armed,age,gender,signs_of_mental_illness,threat_level,flee,body_camera,y
+gun,46.0,M,False,attack,Not fleeing,False,0
+knife,31.0,M,False,other,Not fleeing,False,0
+other,34.0,M,False,other,Not fleeing,False,0
+unarmed,25.0,F,False,other,Not fleeing,False,0
+gun,48.0,M,False,attack,Car,False,0
+knife,34.0,M,False,attack,Not fleeing,False,0
+gun,47.0,F,False,attack,Not fleeing,False,0
+gun,44.0,M,False,attack,Not fleeing,False,0
+other,36.0,M,False,other,Not fleeing,False,0
+other,41.0,M,False,other,Not fleeing,False,0
+gun,50.0,M,False,attack,Not fleeing,False,0
+knife,45.0,M,False,other,Not fleeing,False,0
+gun,29.0,M,False,attack,Not fleeing,False,0
+knife,51.0,F,False,attack,Not fleeing,False,0
+gun,42.0,M,False,attack,Not fleeing,False,0
+gun,38.0,M,False,attack,Car,False,0
+gun,44.0,M,False,other,Car,True,0
+gun,28.0,M,False,attack,Car,True,0
+gun,52.0,M,False,other,Foot,False,0
+other,69.0,M,False,other,Not fleeing,False,0
+gun,47.0,M,False,other,Not fleeing,False,0
+other,19.0,M,False,attack,Car,False,0
+gun,42.0,M,True,attack,Not fleeing,False,0
+other,45.0,M,False,attack,Not fleeing,False,0
+gun,62.0,M,False,attack,Not fleeing,False,0
+gun,63.0,M,True,attack,Not fleeing,False,0
+other,29.0,M,False,attack,Car,False,0
+knife,31.0,M,True,attack,Not fleeing,True,0
+other,29.0,M,False,attack,Car,False,0
+gun,65.0,M,True,attack,Not fleeing,True,0
+knife,59.0,M,False,undetermined,Not fleeing,False,0
+unarmed,37.0,M,False,attack,Foot,False,0
+gun,45.0,M,False,attack,Not fleeing,False,0
+other,26.0,F,False,attack,Not fleeing,False,0
+gun,32.0,M,False,attack,Not fleeing,False,0
+knife,17.0,M,False,other,Not fleeing,False,0
+gun,39.0,M,False,attack,Not fleeing,False,0
+other,31.0,M,False,attack,Car,False,0
+gun,29.0,M,False,attack,Not fleeing,False,0
+gun,38.0,M,False,attack,Car,False,0
+other,48.0,M,True,attack,Car,True,0
+other,51.0,M,True,other,Not fleeing,False,0
+unarmed,41.0,M,False,other,Not fleeing,False,0
+other,43.0,M,False,other,Not fleeing,False,0
+gun,47.0,M,True,attack,Not fleeing,False,0
+gun,23.0,M,True,attack,Not fleeing,False,0
+gun,40.0,M,False,attack,Car,False,0
+gun,41.0,M,False,attack,Not fleeing,False,0
+gun,21.0,M,False,attack,Car,False,0
+gun,42.0,F,False,other,Not fleeing,False,0
+gun,59.0,M,False,attack,Not fleeing,False,0
+gun,24.0,M,False,attack,Not fleeing,False,0
+gun,47.0,M,False,attack,Not fleeing,True,0
+gun,35.0,M,False,attack,Not fleeing,False,0
+other,47.0,M,True,attack,Not fleeing,False,0
+gun,46.0,M,True,attack,Not fleeing,False,0
+knife,42.0,M,False,attack,Not fleeing,False,0
+gun,45.0,M,False,attack,Not fleeing,False,0
+knife,32.0,M,True,attack,Not fleeing,False,0
+gun,28.0,M,False,other,Other,False,0
+gun,49.0,M,False,attack,Not fleeing,False,0
+gun,64.0,M,False,attack,Not fleeing,False,0
+gun,46.0,M,False,other,Not fleeing,False,0
+gun,57.0,M,True,other,Foot,False,0
+gun,44.0,M,False,attack,Not fleeing,False,0
+gun,38.0,M,False,attack,Car,False,0
+other,25.0,M,False,attack,Not fleeing,True,0
+gun,22.0,M,False,other,Foot,False,0
+gun,52.0,M,False,other,Not fleeing,False,0
+gun,28.0,M,False,attack,Car,False,0
+other,57.0,F,True,attack,Not fleeing,True,0
+gun,31.0,M,False,attack,Not fleeing,False,0
+other,52.0,M,False,attack,Not fleeing,False,0
+other,50.0,M,False,attack,Car,False,0
+knife,48.0,M,False,attack,Not fleeing,False,0
+other,35.0,F,False,other,Foot,False,0
+gun,28.0,M,False,other,Not fleeing,False,0
+gun,51.0,M,False,attack,Not fleeing,False,0
+gun,66.0,M,False,attack,Not fleeing,False,0
+gun,28.0,M,False,attack,Foot,False,0
+gun,34.0,M,False,attack,Not fleeing,False,0
+knife,34.0,M,False,attack,Foot,False,0
+knife,45.0,M,False,other,Other,False,0
+gun,48.0,M,False,attack,Not fleeing,False,0
+gun,41.0,M,False,attack,Car,False,0
+gun,26.0,M,False,attack,Foot,False,0
+other,48.0,M,False,other,Not fleeing,False,0
+gun,28.0,M,False,attack,Other,False,0
+other,42.0,M,False,attack,Not fleeing,False,0
+gun,24.0,M,False,other,Not fleeing,False,0
+knife,40.0,M,False,other,Not fleeing,False,0
+gun,30.0,M,True,other,Foot,False,0
+gun,57.0,M,False,other,Not fleeing,False,0
+gun,24.0,M,True,attack,Other,False,0
+knife,38.0,M,False,attack,Not fleeing,False,0
+gun,28.0,M,False,attack,Other,False,0
+gun,49.0,M,False,attack,Foot,False,0
+gun,50.0,M,False,attack,Not fleeing,False,0
+gun,57.0,M,True,other,Foot,True,0
+gun,36.0,M,True,attack,Car,False,0
+gun,45.0,M,False,attack,Not fleeing,False,0
+gun,58.0,M,False,other,Not fleeing,False,0
+gun,52.0,M,False,attack,Car,False,0
+gun,25.0,M,False,attack,Car,True,0
+knife,49.0,M,True,other,Not fleeing,False,0
+other,47.0,M,False,attack,Car,False,0
+gun,25.0,M,False,attack,Not fleeing,False,0
+unarmed,22.0,M,False,attack,Not fleeing,False,0
+knife,30.0,M,False,attack,Car,False,0
+other,20.0,M,False,attack,Car,False,0
+other,43.0,M,True,other,Not fleeing,True,0
+gun,34.0,M,False,attack,Not fleeing,False,0
+gun,34.0,M,False,attack,Not fleeing,False,0
+gun,32.0,M,False,attack,Foot,False,0
+other,17.0,F,True,attack,Not fleeing,True,0
+knife,27.0,M,True,attack,Not fleeing,False,0
+gun,27.0,M,False,attack,Not fleeing,False,0
+knife,55.0,M,False,other,Not fleeing,False,0
+gun,35.0,M,False,other,Not fleeing,False,0
+other,20.0,F,False,attack,Not fleeing,False,0
+other,25.0,M,False,attack,Car,False,0
+knife,56.0,M,False,other,Not fleeing,False,0
+gun,40.0,F,False,attack,Foot,False,0
+gun,26.0,M,False,attack,Car,False,0
+gun,35.0,F,True,attack,Not fleeing,False,0
+knife,56.0,M,False,other,Not fleeing,False,0
+gun,26.0,M,False,attack,Car,False,0
+knife,39.0,F,False,other,Not fleeing,False,0
+other,27.0,M,True,other,Not fleeing,False,0
+knife,29.0,M,False,attack,Not fleeing,False,0
+gun,58.0,F,True,attack,Not fleeing,False,0
+other,36.0,M,True,attack,Not fleeing,False,0
+gun,37.0,M,False,attack,Foot,False,0
+other,50.0,M,False,attack,Not fleeing,False,0
+unarmed,31.0,M,False,attack,Not fleeing,False,0
+gun,21.0,M,True,attack,Not fleeing,True,0
+knife,28.0,M,False,other,Not fleeing,False,0
+gun,41.0,M,False,attack,Car,True,0
+gun,37.0,M,False,other,Not fleeing,False,0
+gun,61.0,M,False,attack,Not fleeing,False,0
+other,38.0,F,False,attack,Car,False,0
+gun,24.0,M,False,attack,Foot,False,0
+gun,44.0,M,False,attack,Not fleeing,False,0
+gun,57.0,M,False,other,Not fleeing,False,0
+knife,32.0,M,False,other,Foot,False,0
+gun,47.0,M,False,attack,Car,False,0
+gun,24.0,M,True,attack,Not fleeing,False,0
+gun,42.0,F,False,attack,Not fleeing,False,0
+other,33.0,F,True,attack,Not fleeing,True,0
+gun,26.0,M,True,attack,Foot,False,0
+unarmed,29.0,M,False,attack,Not fleeing,False,0
+unarmed,21.0,M,False,attack,Not fleeing,False,0
+unarmed,20.0,M,False,undetermined,Foot,False,0
+knife,28.0,M,False,other,Not fleeing,False,0
+gun,40.0,M,False,attack,Not fleeing,False,0
+gun,44.0,M,False,attack,Not fleeing,False,0
+gun,56.0,F,False,attack,Not fleeing,False,0
+gun,54.0,M,False,attack,Foot,False,0
+gun,51.0,M,False,attack,Not fleeing,False,0
+knife,38.0,M,False,other,Not fleeing,False,0
+knife,35.0,M,False,attack,Not fleeing,False,0
+gun,53.0,M,False,other,Not fleeing,False,0
+knife,50.0,M,False,other,Not fleeing,False,0
+other,55.0,M,False,attack,Not fleeing,False,0
+knife,30.0,M,False,attack,Not fleeing,False,0
+gun,38.0,M,False,attack,Not fleeing,False,0
+gun,40.0,M,False,other,Not fleeing,False,0
+other,53.0,M,False,other,Not fleeing,False,0
+gun,29.0,M,False,other,Foot,False,0
+knife,45.0,M,False,other,Car,False,0
+gun,26.0,M,False,attack,Foot,False,0
+unarmed,46.0,M,True,undetermined,Car,True,0
+unarmed,33.0,M,False,other,Not fleeing,False,0
+other,33.0,M,True,other,Not fleeing,False,0
+gun,39.0,M,False,attack,Car,False,0
+gun,22.0,M,False,other,Other,False,0
+gun,56.0,M,False,attack,Not fleeing,False,0
+gun,46.0,M,False,attack,Not fleeing,False,0
+other,33.0,F,True,other,Car,False,0
+other,32.0,M,False,attack,Not fleeing,False,0
+gun,32.0,M,True,attack,Not fleeing,False,0
+other,30.0,M,False,other,Car,False,0
+unarmed,32.0,M,False,other,Car,False,0
+gun,24.0,M,False,other,Car,False,0
+other,20.0,M,True,attack,Not fleeing,False,0
+other,27.0,M,False,other,Car,False,0
+gun,50.0,M,False,attack,Not fleeing,False,0
+knife,57.0,M,True,attack,Not fleeing,False,0
+other,32.0,F,False,attack,Car,False,0
+gun,24.0,M,False,attack,Not fleeing,True,0
+gun,48.0,M,False,attack,Car,False,0
+unarmed,34.0,M,True,other,Not fleeing,False,0
+other,37.0,M,True,attack,Not fleeing,False,0
+other,39.0,M,False,attack,Not fleeing,False,0
+gun,31.0,M,False,other,Not fleeing,False,0
+gun,28.0,M,True,attack,Not fleeing,False,0
+gun,20.0,M,False,attack,Foot,False,0
+gun,40.0,M,False,other,Not fleeing,False,0
+unarmed,30.0,F,False,other,Not fleeing,False,0
+gun,32.0,M,False,attack,Not fleeing,False,0
+other,42.0,M,True,other,Not fleeing,False,0
+gun,41.0,M,True,attack,Car,False,0
+gun,41.0,M,False,other,Foot,False,0
+unarmed,58.0,F,False,attack,Not fleeing,False,0
+gun,77.0,M,False,attack,Not fleeing,False,0
+gun,30.0,M,False,attack,Car,False,0
+knife,46.0,M,True,attack,Not fleeing,True,0
+gun,55.0,M,False,attack,Not fleeing,False,0
+gun,62.0,M,False,attack,Not fleeing,False,0
+other,31.0,M,False,attack,Car,False,0
+gun,33.0,M,False,attack,Not fleeing,False,0
+gun,18.0,M,False,other,Not fleeing,False,0
+gun,45.0,M,True,other,Not fleeing,False,0
+gun,37.0,M,True,attack,Not fleeing,True,0
+knife,29.0,M,False,attack,Not fleeing,False,0
+gun,37.0,M,False,attack,Car,False,0
+gun,63.0,M,True,attack,Not fleeing,True,0
+other,29.0,M,False,attack,Not fleeing,False,0
+gun,43.0,M,False,attack,Car,False,0
+gun,58.0,M,False,attack,Not fleeing,False,0
+knife,28.0,M,True,attack,Not fleeing,True,0
+other,36.0,M,False,attack,Car,False,0
+other,32.0,M,False,attack,Car,False,0
+gun,56.0,M,True,other,Not fleeing,False,0
+other,31.0,M,False,attack,Car,False,0
+other,73.0,M,False,attack,Car,False,0
+gun,37.0,M,False,attack,Car,True,0
+other,25.0,M,False,attack,Not fleeing,True,0
+gun,34.0,M,False,attack,Other,True,0
+other,40.0,M,True,other,Not fleeing,True,0
+gun,49.0,M,True,attack,Foot,False,0
+gun,33.0,M,False,attack,Not fleeing,False,0
+unarmed,46.0,M,False,attack,Not fleeing,False,0
+other,38.0,M,False,other,Car,True,0
+gun,41.0,M,False,attack,Foot,False,0
+gun,76.0,M,False,attack,Not fleeing,False,0
+gun,40.0,F,False,attack,Car,False,0
+unarmed,36.0,M,True,other,Foot,False,0
+gun,16.0,M,False,attack,Not fleeing,False,0
+other,48.0,M,False,other,Car,False,0
+gun,49.0,M,False,attack,Not fleeing,False,0
+gun,25.0,M,True,attack,Car,False,0
+other,24.0,M,False,attack,Car,False,0
+gun,27.0,M,True,attack,Not fleeing,False,0
+gun,27.0,M,False,other,Not fleeing,False,0
+knife,47.0,M,False,other,Not fleeing,False,0
+gun,58.0,M,False,attack,Not fleeing,False,0
+other,45.0,F,False,other,Not fleeing,False,0
+gun,47.0,M,False,attack,Car,False,0
+gun,21.0,M,False,attack,Car,False,0
+knife,41.0,M,True,other,Car,False,0
+gun,49.0,M,False,attack,Not fleeing,False,0
+gun,47.0,M,False,attack,Not fleeing,False,0
+gun,35.0,M,False,other,Not fleeing,False,0
+knife,43.0,M,False,other,Not fleeing,False,0
+gun,32.0,M,False,attack,Not fleeing,False,0
+knife,50.0,M,False,other,Car,False,0
+gun,46.0,M,False,attack,Not fleeing,False,0
+gun,57.0,M,True,other,Not fleeing,False,0
+gun,53.0,M,False,attack,Not fleeing,False,0
+knife,42.0,M,False,attack,Not fleeing,False,0
+gun,69.0,M,False,other,Not fleeing,False,0
+gun,42.0,M,False,attack,Not fleeing,False,0
+other,44.0,M,False,attack,Foot,False,0
+gun,34.0,M,True,attack,Not fleeing,False,0
+other,62.0,M,False,other,Not fleeing,False,0
+gun,38.0,M,True,attack,Not fleeing,False,0
+unarmed,31.0,M,False,attack,Not fleeing,False,0
+other,43.0,M,False,attack,Car,False,0
+gun,27.0,M,False,attack,Not fleeing,False,0
+knife,47.0,M,True,attack,Not fleeing,True,0
+gun,56.0,M,True,attack,Not fleeing,False,0
+other,32.0,M,False,attack,Foot,False,0
+gun,34.0,M,False,other,Car,False,0
+other,41.0,M,False,undetermined,Car,False,0
+knife,46.0,M,True,attack,Foot,True,0
+gun,45.0,M,False,attack,Car,False,0
+unarmed,20.0,M,True,other,Not fleeing,False,0
+gun,58.0,M,False,attack,Not fleeing,True,0
+gun,67.0,M,False,attack,Not fleeing,False,0
+knife,54.0,M,True,attack,Not fleeing,False,0
+unarmed,30.0,M,False,other,Not fleeing,False,0
+unarmed,37.0,M,False,attack,Not fleeing,False,0
+gun,80.0,M,False,attack,Not fleeing,False,0
+other,31.0,M,False,attack,Not fleeing,False,0
+knife,48.0,M,True,other,Not fleeing,False,0
+other,33.0,M,True,attack,Not fleeing,True,0
+gun,59.0,M,True,attack,Not fleeing,False,0
+gun,20.0,M,False,attack,Foot,False,0
+gun,23.0,M,True,attack,Car,False,0
+unarmed,31.0,M,False,other,Foot,False,0
+gun,60.0,M,True,attack,Not fleeing,False,0
+unarmed,52.0,M,False,attack,Other,False,0
+gun,58.0,M,False,attack,Car,False,0
+unarmed,48.0,M,True,attack,Not fleeing,False,0
+gun,58.0,M,True,other,Not fleeing,False,0
+gun,57.0,M,False,attack,Not fleeing,False,0
+gun,41.0,M,False,attack,Foot,False,0
+gun,53.0,M,False,other,Not fleeing,False,0
+other,42.0,F,False,attack,Car,False,0
+gun,47.0,M,False,attack,Not fleeing,False,1
+knife,67.0,M,False,other,Not fleeing,False,1
+gun,22.0,M,False,attack,Not fleeing,False,1
+gun,26.0,M,False,other,Other,False,1
+gun,39.0,M,False,other,Not fleeing,False,1
+gun,24.0,M,False,attack,Foot,False,1
+gun,18.0,M,False,attack,Foot,False,1
+unarmed,28.0,M,False,undetermined,Not fleeing,False,1
+gun,41.0,M,False,attack,Car,False,1
+other,18.0,M,False,other,Other,False,1
+gun,24.0,M,False,attack,Not fleeing,True,1
+gun,56.0,M,False,other,Not fleeing,False,1
+gun,24.0,M,False,attack,Foot,False,1
+gun,18.0,M,False,attack,Foot,True,1
+other,27.0,M,False,attack,Foot,True,1
+knife,31.0,M,False,attack,Not fleeing,True,1
+gun,42.0,M,False,other,Foot,False,1
+gun,23.0,M,False,other,Foot,False,1
+gun,43.0,M,True,attack,Not fleeing,False,1
+gun,32.0,M,True,attack,Not fleeing,False,1
+knife,26.0,M,False,attack,Not fleeing,False,1
+gun,25.0,M,False,attack,Not fleeing,False,1
+gun,30.0,M,True,attack,Not fleeing,False,1
+other,31.0,M,False,attack,Car,False,1
+gun,20.0,M,False,other,Foot,False,1
+other,26.0,M,False,attack,Not fleeing,False,1
+gun,23.0,M,False,attack,Not fleeing,False,1
+gun,20.0,M,False,attack,Foot,False,1
+gun,24.0,M,False,attack,Not fleeing,False,1
+knife,28.0,M,False,attack,Foot,False,1
+unarmed,28.0,M,False,attack,Not fleeing,True,1
+gun,50.0,F,False,attack,Not fleeing,False,1
+other,53.0,M,False,other,Not fleeing,False,1
+gun,44.0,M,False,attack,Not fleeing,True,1
+other,47.0,M,False,attack,Foot,False,1
+gun,30.0,M,False,attack,Car,False,1
+gun,27.0,M,True,other,Not fleeing,True,1
+gun,45.0,M,False,attack,Not fleeing,False,1
+gun,55.0,M,False,other,Not fleeing,True,1
+unarmed,31.0,M,True,undetermined,Foot,False,1
+gun,20.0,M,False,other,Foot,False,1
+gun,36.0,M,False,attack,Foot,False,1
+gun,30.0,M,False,attack,Not fleeing,False,1
+gun,34.0,M,False,attack,Car,False,1
+gun,25.0,M,False,attack,Foot,False,1
+gun,29.0,M,False,other,Not fleeing,True,1
+gun,30.0,M,False,attack,Foot,False,1
+gun,26.0,M,False,attack,Not fleeing,False,1
+other,38.0,M,False,attack,Not fleeing,False,1
+gun,22.0,M,False,attack,Foot,False,1
+gun,26.0,M,False,attack,Foot,False,1
+unarmed,41.0,M,False,other,Car,False,1
+knife,36.0,M,True,other,Not fleeing,False,1
+gun,25.0,M,True,attack,Foot,True,1
+knife,36.0,M,False,attack,Not fleeing,True,1
+gun,27.0,M,False,attack,Not fleeing,False,1
+gun,28.0,M,False,attack,Not fleeing,False,1
+gun,29.0,M,False,attack,Not fleeing,True,1
+gun,27.0,M,False,other,Car,False,1
+other,23.0,M,True,attack,Not fleeing,False,1
+gun,31.0,M,False,attack,Not fleeing,False,1
+gun,37.0,M,False,attack,Foot,True,1
+gun,30.0,M,False,attack,Foot,True,1
+gun,19.0,M,False,attack,Not fleeing,True,1
+gun,60.0,M,False,attack,Car,False,1
+other,31.0,M,False,attack,Not fleeing,False,1
+gun,48.0,M,False,attack,Not fleeing,True,1
+gun,31.0,M,False,other,Foot,False,1
+gun,31.0,M,False,attack,Foot,False,1
+gun,39.0,M,False,attack,Not fleeing,False,1
+gun,28.0,M,False,attack,Car,False,1
+knife,25.0,M,False,other,Not fleeing,False,1
+knife,31.0,M,True,attack,Not fleeing,True,1
+gun,39.0,M,False,attack,Foot,False,1
+other,29.0,M,False,attack,Foot,False,1
+other,40.0,M,False,other,Not fleeing,False,1
+gun,50.0,M,False,attack,Not fleeing,False,1
+knife,46.0,M,False,other,Foot,False,1
+gun,31.0,M,False,attack,Not fleeing,False,1
+gun,37.0,M,False,other,Car,False,1
+other,20.0,M,False,undetermined,Foot,False,1
+gun,20.0,M,False,attack,Car,False,1
+other,46.0,M,False,other,Other,False,1
+gun,27.0,M,False,attack,Other,True,1
+other,18.0,M,False,attack,Not fleeing,False,1
+other,37.0,M,False,attack,Car,False,1
+other,44.0,M,False,attack,Car,False,1
+unarmed,27.0,M,False,attack,Foot,False,1
+other,30.0,M,False,other,Not fleeing,False,1
+gun,17.0,M,False,attack,Car,False,1
+gun,42.0,M,False,attack,Car,False,1
+unarmed,26.0,F,False,undetermined,Not fleeing,False,1
+knife,58.0,M,False,other,Not fleeing,False,1
+knife,40.0,M,False,attack,Not fleeing,False,1
+gun,66.0,M,False,attack,Not fleeing,False,1
+other,30.0,M,False,attack,Not fleeing,False,1
+gun,18.0,M,False,attack,Not fleeing,False,1
+gun,38.0,M,False,other,Not fleeing,False,1
+gun,25.0,M,False,undetermined,Not fleeing,False,1
+gun,47.0,M,False,attack,Not fleeing,False,1
+gun,36.0,M,False,attack,Not fleeing,True,1
+other,22.0,M,False,attack,Foot,True,1
+other,30.0,M,False,attack,Car,True,1
+gun,23.0,M,False,attack,Not fleeing,False,1
+other,74.0,M,False,attack,Not fleeing,False,1
+unarmed,54.0,M,False,undetermined,Not fleeing,False,1
+gun,27.0,M,False,attack,Foot,False,1
+gun,39.0,M,False,attack,Foot,True,1
+gun,57.0,M,False,attack,Not fleeing,True,1
+other,30.0,M,False,attack,Car,False,1
+gun,33.0,M,False,attack,Not fleeing,False,1
+other,31.0,M,False,attack,Foot,False,1
+unarmed,21.0,M,False,undetermined,Foot,False,1
+gun,25.0,M,False,attack,Not fleeing,False,1
+other,35.0,M,False,attack,Foot,False,1
+unarmed,46.0,M,False,other,Car,False,1
+other,37.0,M,False,attack,Not fleeing,False,1
+gun,26.0,M,False,attack,Foot,False,1
+other,45.0,F,False,attack,Not fleeing,False,1
+other,25.0,M,False,attack,Not fleeing,False,1
+knife,49.0,M,False,attack,Not fleeing,False,1
+gun,34.0,M,False,attack,Not fleeing,False,1
+gun,19.0,M,True,other,Car,False,1
+other,18.0,M,False,other,Car,False,1
+gun,39.0,M,False,attack,Car,False,1
+gun,20.0,M,False,attack,Foot,False,1
+gun,31.0,M,False,attack,Not fleeing,False,1
+unarmed,34.0,M,False,attack,Foot,False,1
+knife,27.0,M,False,attack,Not fleeing,False,1
+unarmed,28.0,F,False,other,Not fleeing,True,1
+gun,34.0,M,False,attack,Foot,False,1
+gun,44.0,M,False,attack,Not fleeing,False,1
+other,24.0,M,False,other,Not fleeing,False,1
+gun,17.0,M,False,attack,Not fleeing,False,1
+gun,27.0,M,False,attack,Car,False,1
+gun,23.0,M,False,other,Foot,False,1
+gun,19.0,M,False,attack,Foot,False,1
+gun,28.0,M,False,attack,Not fleeing,False,1
+gun,32.0,M,False,attack,Not fleeing,False,1
+gun,21.0,M,False,other,Not fleeing,False,1
+gun,23.0,M,False,attack,Not fleeing,False,1
+gun,35.0,M,False,attack,Other,True,1
+other,45.0,M,False,other,Foot,False,1
+gun,28.0,M,False,attack,Not fleeing,False,1
+other,33.0,M,False,other,Not fleeing,False,1
+other,24.0,M,False,undetermined,Foot,False,1
+gun,40.0,M,False,attack,Not fleeing,False,1
+knife,19.0,M,False,other,Car,True,1
+gun,24.0,M,False,other,Foot,False,1
+gun,45.0,M,False,attack,Not fleeing,False,1
+gun,39.0,M,True,attack,Car,False,1
+other,26.0,M,False,attack,Car,True,1
+gun,68.0,M,False,attack,Not fleeing,False,1
+knife,38.0,M,False,attack,Not fleeing,True,1
+gun,43.0,M,False,attack,Other,False,1
+gun,30.0,M,False,attack,Other,False,1
+gun,22.0,M,False,attack,Car,False,1
+knife,30.0,M,False,other,Not fleeing,True,1
+gun,39.0,M,False,attack,Car,False,1
+gun,21.0,M,False,attack,Foot,False,1
+gun,39.0,M,False,attack,Not fleeing,False,1
+gun,41.0,M,False,attack,Car,False,1
+gun,53.0,M,False,attack,Not fleeing,False,1
+gun,47.0,M,False,other,Not fleeing,False,1
+knife,20.0,M,False,other,Not fleeing,True,1
+knife,32.0,M,False,attack,Foot,False,1
+gun,61.0,M,False,attack,Not fleeing,False,1
+gun,34.0,M,False,other,Not fleeing,True,1
+gun,49.0,M,False,attack,Not fleeing,True,1
+unarmed,43.0,M,False,attack,Not fleeing,False,1
+gun,31.0,M,False,attack,Not fleeing,False,1
+gun,21.0,M,False,attack,Foot,False,1
+unarmed,17.0,M,False,attack,Foot,False,1
+gun,24.0,M,False,attack,Car,False,1
+gun,22.0,M,True,attack,Not fleeing,False,1
+gun,21.0,M,False,attack,Car,True,1
+other,32.0,M,False,attack,Not fleeing,True,1
+gun,26.0,M,False,other,Not fleeing,False,1
+gun,37.0,M,False,attack,Not fleeing,False,1
+gun,18.0,M,False,attack,Not fleeing,False,1
+other,23.0,M,False,attack,Car,False,1
+gun,41.0,M,False,attack,Not fleeing,False,1
+other,48.0,M,False,attack,Not fleeing,True,1
+gun,37.0,M,False,attack,Car,False,1
+gun,18.0,M,True,other,Car,False,1
+gun,41.0,M,False,attack,Not fleeing,False,1
+gun,40.0,M,False,attack,Not fleeing,False,1
+knife,49.0,M,False,attack,Not fleeing,False,1
+gun,45.0,M,False,attack,Not fleeing,False,1
+gun,32.0,M,False,attack,Not fleeing,False,1
+gun,34.0,M,True,attack,Not fleeing,True,1
+gun,26.0,M,False,attack,Not fleeing,False,1
+gun,52.0,M,True,attack,Car,False,1
+gun,18.0,M,False,attack,Other,False,1
+knife,49.0,M,False,attack,Foot,False,1
+gun,21.0,M,False,attack,Foot,True,1
+knife,29.0,M,True,attack,Not fleeing,False,1
+gun,24.0,M,False,other,Not fleeing,True,1
+other,32.0,M,False,attack,Car,False,1
+other,33.0,M,False,attack,Not fleeing,False,1
+gun,23.0,M,False,other,Not fleeing,False,1
+gun,40.0,M,False,attack,Not fleeing,False,1
+other,23.0,M,True,attack,Not fleeing,True,1
+gun,17.0,M,False,attack,Foot,False,1
+gun,51.0,M,False,attack,Not fleeing,False,1
+other,38.0,M,False,attack,Not fleeing,False,1
+gun,38.0,M,False,attack,Not fleeing,False,1
+unarmed,33.0,M,False,attack,Not fleeing,False,1
+gun,34.0,M,False,other,Foot,False,1
+other,28.0,M,False,other,Car,False,1
+unarmed,24.0,M,False,attack,Foot,True,1
+gun,45.0,M,False,attack,Not fleeing,False,1
+gun,23.0,M,False,attack,Not fleeing,False,1
+other,22.0,M,False,attack,Car,False,1
+gun,28.0,M,False,attack,Foot,True,1
+gun,17.0,M,False,other,Foot,False,1
+other,22.0,M,False,attack,Car,True,1
+knife,53.0,M,False,attack,Not fleeing,False,1
+gun,21.0,M,False,other,Not fleeing,False,1
+other,20.0,M,False,attack,Foot,False,1
+gun,31.0,M,True,attack,Not fleeing,False,1
+other,32.0,M,False,attack,Car,False,1
+gun,31.0,M,False,other,Foot,False,1
+gun,18.0,M,False,other,Car,False,1
+other,32.0,F,False,other,Not fleeing,False,1
+other,47.0,M,False,attack,Not fleeing,False,1
+unarmed,47.0,M,False,undetermined,Foot,False,1
+gun,19.0,M,False,other,Not fleeing,False,1
+gun,23.0,M,False,attack,Car,False,1
+gun,31.0,M,False,attack,Not fleeing,True,1
+gun,21.0,M,False,other,Other,True,1
+gun,21.0,M,False,other,Not fleeing,False,1
+other,28.0,M,False,undetermined,Not fleeing,False,1
+knife,27.0,M,True,other,Not fleeing,False,1
+gun,47.0,M,True,attack,Not fleeing,False,1
+gun,33.0,M,True,attack,Not fleeing,True,1
+gun,35.0,M,False,attack,Foot,False,1
+gun,19.0,M,False,attack,Car,False,1
+other,19.0,M,False,undetermined,Car,False,1
+gun,24.0,M,False,attack,Not fleeing,True,1
+gun,19.0,M,False,other,Car,False,1
+knife,33.0,M,False,other,Not fleeing,False,1
+gun,22.0,M,False,other,Foot,False,1
+gun,27.0,M,False,attack,Car,True,1
+other,31.0,M,True,other,Foot,False,1
+gun,28.0,M,False,attack,Foot,False,1
+gun,51.0,M,True,attack,Not fleeing,False,1
+gun,24.0,M,False,attack,Foot,False,1
+gun,34.0,M,False,attack,Not fleeing,True,1
+gun,46.0,M,False,attack,Not fleeing,False,1
+gun,70.0,M,False,other,Not fleeing,False,1
+gun,28.0,M,False,attack,Not fleeing,False,1
+gun,24.0,M,False,attack,Car,True,1
+unarmed,35.0,M,True,attack,Foot,True,1
+gun,32.0,M,False,other,Not fleeing,False,1
+gun,39.0,M,False,attack,Not fleeing,False,1
+gun,33.0,M,False,attack,Not fleeing,False,1
+other,21.0,M,False,attack,Car,False,1
+gun,19.0,M,False,attack,Not fleeing,False,1
+gun,24.0,M,False,other,Not fleeing,False,1
+gun,21.0,M,False,attack,Foot,False,1
+gun,39.0,M,True,attack,Not fleeing,False,1
+knife,55.0,M,False,attack,Not fleeing,True,1
+gun,23.0,M,False,other,Car,False,1
+knife,22.0,M,False,attack,Not fleeing,False,1
+knife,21.0,M,False,other,Foot,False,1
+gun,15.0,M,False,attack,Not fleeing,False,1
+gun,33.0,M,False,other,Not fleeing,True,1
+gun,58.0,M,False,attack,Car,False,1
+gun,27.0,M,False,attack,Not fleeing,True,1
+other,22.0,M,False,other,Not fleeing,True,1
+gun,61.0,M,False,attack,Not fleeing,False,1
+gun,32.0,M,False,attack,Not fleeing,False,1
+gun,31.0,M,False,attack,Foot,False,1
+gun,19.0,M,False,attack,Car,True,1
+knife,22.0,M,False,other,Not fleeing,False,1
+other,35.0,M,False,attack,Foot,False,1
+gun,47.0,F,True,attack,Not fleeing,False,1
+other,30.0,M,False,attack,Car,False,1
+gun,17.0,M,False,other,Not fleeing,False,1
+gun,17.0,M,False,other,Car,False,1
+gun,38.0,M,False,attack,Foot,False,1
+gun,27.0,M,False,other,Not fleeing,False,1
+gun,19.0,M,False,undetermined,Car,False,1
+other,30.0,M,False,attack,Car,False,1
+other,22.0,M,True,attack,Not fleeing,False,1
+knife,38.0,M,False,attack,Foot,False,1
+knife,35.0,M,False,attack,Not fleeing,False,1
+unarmed,31.0,M,False,attack,Other,False,1
+gun,21.0,M,False,attack,Foot,False,1
+other,62.0,M,False,undetermined,Not fleeing,False,1
+gun,27.0,M,False,attack,Foot,True,1
+gun,35.0,M,False,other,Not fleeing,False,1
+gun,29.0,M,False,attack,Car,False,1
+unarmed,57.0,M,False,other,Not fleeing,True,1
+gun,22.0,M,False,undetermined,Foot,False,1
+other,22.0,M,False,attack,Car,False,1
+gun,28.0,M,False,attack,Car,False,1
+knife,43.0,M,False,other,Not fleeing,False,1
+gun,33.0,M,False,attack,Not fleeing,False,1
